@@ -48,7 +48,7 @@ p span {
   animation: turnOn forwards step-end;
 }
 
-p span:nth-child(1) {
+/* p span:nth-child(1) {
   animation-delay: 0.3s;
 }
 
@@ -58,7 +58,7 @@ p span:nth-child(2) {
 
 p span:nth-child(3) {
   animation-delay: 0.4s;
-}
+} */
 
 p span:nth-child(1) {
   animation: turnOn 0.27s forwards step-end,
