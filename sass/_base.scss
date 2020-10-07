@@ -14,95 +14,37 @@
     0 0 20px var(--border-color), 0 0 30px var(--border-color);
 }
 
+// FONT VARIABLES
+$font-primary: "Nunito", sans-serif;
+$font-display: "Josefin Sans", sans-serif;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
 body {
   margin: 0px;
   background: #00061c;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100vh;
 }
 
-div {
-  background-color: transparent;
-  border: 3px solid rgba(255, 255, 255, 0.33);
-  border-radius: 20px;
-  padding: 14px 24px;
-  transform: rotate(-6deg);
-  animation: turnOnBorder 0.24s forwards step-end,
-    flickerBorder calc(var(--animation-time) * 16) infinite step-end 1s;
-}
-
-p {
-  font-family: Roboto;
-  margin: 0px;
-  color: #fff;
-}
-
-span {
-  font-size: 100px;
-}
-
-p span {
-  opacity: 0.33;
-  animation: turnOn forwards step-end;
-}
-
-/* p span:nth-child(1) {
-  animation-delay: 0.3s;
-}
-
-p span:nth-child(2) {
-  animation-delay: 0.2s;
-}
-
-p span:nth-child(3) {
-  animation-delay: 0.4s;
-} */
-
-p span:nth-child(1) {
-  animation: turnOn 0.27s forwards step-end,
-    flicker var(--animation-time) infinite step-end 1s;
-}
-
-p span:nth-child(5) {
-  animation-delay: 0.4s;
-}
-
-p span:nth-child(3) {
-  animation: turnOn 0.5s forwards step-end,
-    flicker var(--animation-time) infinite step-end 2s;
-}
-
-@keyframes turnOnBorder {
-  100% {
-    border: 3px solid #fff;
-    box-shadow: var(--box-shadow);
-    opacity: 1;
-  }
-}
-
-@keyframes turnOn {
-  100% {
-    text-shadow: var(--text-shadow);
-    opacity: 1;
-  }
-}
-
-@keyframes flicker {
-  0% {
-    text-shadow: var(--text-shadow);
-  }
-  99% {
-    text-shadow: none;
-  }
-}
-
-@keyframes flickerBorder {
-  0% {
-    box-shadow: var(--box-shadow);
-  }
-  99% {
-    box-shadow: none;
-  }
+.container {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80vw, 1fr));
+  grid-template-rows: 1fr 1fr;
+  // grid-row-gap: 20rem;
+  justify-items: center;
+  // align-items: center;
+  // align-content: end;
 }
