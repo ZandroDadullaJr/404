@@ -1,7 +1,7 @@
 .footer {
   font-size: 2rem;
   width: 100%;
-  padding: 8rem;
+  padding: 2rem;
   background-color: #010413;
   height: 100%;
 
@@ -55,6 +55,23 @@
     & a:active {
       background-color: rgba(#fff, 0.05);
       transform: translateY(-3px);
+    }
+  }
+
+  @media only screen and (max-width: $display-sm) {
+    padding: 2rem;
+
+    &__list {
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    }
+
+    &__items {
+      width: 100%;
+    }
+
+    .copyright {
+      width: 90%;
+      margin-top: 1rem;
     }
   }
 }
